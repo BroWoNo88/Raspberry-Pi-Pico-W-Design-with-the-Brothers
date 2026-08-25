@@ -2,7 +2,7 @@ from machine import Pin, PWM
 from I2C_LCD import screen
 from RGB_LED import rgb_led
 
-def get_colour(bounds,value,inverted = False):
+def get_colour(bounds,value,inverted = False): #Colour function to read the bounds
   if value < bounds[0] or value > bounds[-1]:
       return (128,0,128)
   if inverted:
@@ -26,5 +26,8 @@ lcd.start()
 
 #Set up the RGB LEDs
 temp_led = rgb_led(3,4,5)
-
 hum_led = rgb_led(6,7,8)
+
+#Set up the bounds - temporary and can be changed
+temp_bounds = [0,20,30,50,60,100]
+hum_bounds = [0,20,30,50,60,100]
