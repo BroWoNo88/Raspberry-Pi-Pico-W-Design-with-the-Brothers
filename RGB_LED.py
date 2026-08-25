@@ -10,8 +10,10 @@ class rgb_led:
     self.g.freq(freq)
     self.b.freq(freq)
 
-  def show_colour(self,r,g,b):
+  def show_colour(self,rgb_tuple):
     #Converts from 0-255 to 65535-0
+    r,g,b = rgb_tuple
+    
     r_true = (255 - r)*256
     self.r.duty_u16(r_true)
 
