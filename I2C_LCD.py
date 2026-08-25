@@ -55,7 +55,7 @@ class screen:
           self.lcd_send_byte(0xC0, 0) # Row 2 Start Address
           
       for char in string:
-          self.lcd_send_byte(ord(char), Rs)
+          self.lcd_send_byte(ord(char), self.Rs)
   
   def lcd_display(self,str):
     line1, line2 = str.split('\n')
