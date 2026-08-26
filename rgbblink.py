@@ -32,11 +32,11 @@ def onOrOff():
     else:
         return 255
 
+#Initialisation
 led = rgb_led(0,1,2)
-
-led.show_colour((255,255,255))
-
-for i in range(100):
+#Main loop
+for i in range(1000):
     led.show_colour((onOrOff(), onOrOff(), onOrOff()))
-    sleep(0.1)
+    sleep(0.5)
+#Disable
 led.show_colour((0,0,0))
