@@ -1,7 +1,7 @@
 #import<stdio.h>
-#import<stbool.h>
+#import<stdbool.h>
 
-Int main() {
+int main() {
   printf("Hello, WORLD!");
   return 1;
 }
