@@ -1,6 +1,6 @@
-from time import sleep
+import time
 import random
-from RGB_LED import rgb_led
+from machine import Pin, PWM
 
 class rgb_led:
   def __init__(self,pin_r,pin_g,pin_b,freq = 1000):
@@ -31,10 +31,11 @@ led1 = Pin(13, Pin.OUT)
 led2 = Pin(11, Pin.OUT)
 
 #Main loop
-for i in range(1000):
+for i in range(100):
     led.show_colour((random.randint(0, 255), random.randint(0, 255), random.randint(0, 255) ))
     led1.toggle()
     led2.toggle()
-    sleep(0.05)
+    time.sleep(0.05)
+
 #Disable
 led.show_colour((0,0,0))
