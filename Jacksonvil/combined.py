@@ -76,14 +76,15 @@ notes = [
     'C6', 'D6', 'E6', 'F6', 'G6', 'A6', 'B6'
 ]
 
-for note in notes:
-    play_tone(NOTES[note], 300)
-    time.sleep_ms(50)
+#for note in notes:
+#    play_tone(NOTES[note], 300)
+#    time.sleep_ms(50)
 
 while True:
     if button.value() == 0:  # Button is pressed (LOW)
         led.show_colour((random.randint(0, 255), random.randint(0, 255), random.randint(0, 255) )) 
-        led1.on()   
+        led1.on()  
+        play_tone(262, 150) 
     else:                    # Button is not pressed (HIGH)
         led.show_colour((0,0,0))
         led1.off()

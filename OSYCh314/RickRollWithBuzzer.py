@@ -27,4 +27,3 @@ for y in notes:
     new_dur.append(y*1.25)
 
 play_notes(buzzer,new_notes,dur)
-play_notes(buzzer,new_notes,dur)
