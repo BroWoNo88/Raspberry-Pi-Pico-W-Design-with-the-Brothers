@@ -1,4 +1,4 @@
-import <stdio.h>
+#import <stdio.h>
 
 Int main() {
   printf("Hello, world!");
